@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Jamal's Motos</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="sortcut icon" href="img/favicon.ico" type="image/x-icon" />;
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="js/Index.js"></script>
+</head>
+
+<body class="bodyContent">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="img/motoicone.png" width="40" height="40" class="d-inline-block align-top" alt="" loading="lazy">
+            Jamal - Motos LTDA.
+        </a>
+    </nav>
+
+    <div class="container">
+        <div class="tituloForm">
+            <hr>
+            <h3 class="mx-auto" style="width:max-content">Cadastro de motos </h3>
+            <hr>
+        </div>
+        <form>
+            <h4>Dados Principais</h4>
+            <div class="form-row">
+                <div class="form-group col-5">
+                    <label for="nomeMoto">Nome: </label>
+                    <input type="text" class="form-control" id="nomeMoto">
+                </div>
+                <div class="form-group col-4">
+                    <label for="marca">Marca: </label>
+                    <input type="text" class="form-control" id="marca">
+                </div>
+                <div class="form-group col-3">
+                    <label for="AnoLancamento">Ano :</label>
+                    <input type="number" class="form-control" id="AnoLancamento">
+                </div>
+                <div class="form-group col-6">
+                    <fieldset class="form-group col-6" id="checkEsq">
+                        <h4>Tipo:</h4>
+                        <div class="form-check" >
+                            <input class="form-check-input" type="radio" id="tipo" value="usada">
+                            <label class="form-check-label" for="tipo">Usada</label><br>
+                            <input class="form-check-input" type="radio" id="tipo" value="nova">
+                            <label class="form-check-label" for="tipo">Nova</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group col-6" id="checkDir">
+                        <h4>Forma Pagto:</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="pagto" value="avista">
+                            <label class="form-check-label" for="pagto">Á Vista</label><br>
+                            <input class="form-check-input" type="checkbox" id="pagto" value="financiado">
+                            <label class="form-check-label" for="pagto">Financiado</label><br>
+                            <input class="form-check-input" type="checkbox" id="pagto" value="alienado">
+                            <label class="form-check-label" for="pagto">Alienado</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <hr>
+                <input type="button" onclick="CriarMoto()" id="btnCriar" class="btn btn-dark btn-block"
+                    value="Criar">
+                <input type="button" style="display: none;" id="btnEditar" onclick="EditarMoto()"
+                    class="btn btn-success btn-block" value="Editar">
+        </form>
+
+        <table class="table table-bordered table-light mt-3 text-center" id="tabelaUsuarios">
+            <thead class="thead-info">
+                <tr class="text-center">
+                    <th class="bg-secondary">Nome</th>
+                    <th class="bg-secondary">Marca</th>
+                    <th class="bg-secondary">Ano</th>
+                    <th class="bg-secondary">Tipo</th>
+                    <th class="bg-secondary">Pagamento</th>
+                    <th class="bg-secondary">Editar</th>
+                    <th class="bg-secondary">Excluir</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
